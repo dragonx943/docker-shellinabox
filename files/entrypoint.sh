@@ -8,7 +8,7 @@ hex()
 }
 
 echo "Preparing container .."
-COMMAND="/usr/bin/shellinaboxd -t -s /:LOGIN"
+COMMAND="/usr/bin/shellinaboxd -t"
 
 if [ "$SIAB_PKGS" != "none" ]; then
 	set +e
