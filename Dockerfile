@@ -10,7 +10,7 @@ ENV SIAB_USERCSS="Normal:+/etc/shellinabox/options-enabled/00+Black-on-White.css
   SIAB_PASSWORD=lol \
   SIAB_SHELL=/bin/bash \
   SIAB_HOME=/home/siab \
-  SIAB_SUDO=true \
+  SIAB_SUDO=false \
   SIAB_SSL=true \
   SIAB_SERVICE=/:LOGIN \
   SIAB_PKGS=none \
@@ -24,7 +24,8 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/testing' >> /etc/apk/reposit
     apk update && \
     apk upgrade && \
     apk add --update shadow util-linux pciutils coreutils binutils findutils grep bash bash-completion openssl curl openssh-client sudo shellinabox && rm -rf /var/cache/apk/* && \
-    echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+    echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers \
+    echo "siab ALL=(ALL) ALL" >> /etc/sudoers
 
 EXPOSE 4200
 
