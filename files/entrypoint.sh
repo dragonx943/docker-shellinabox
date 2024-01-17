@@ -53,6 +53,7 @@ if [ "$SIAB_SCRIPT" != "none" ]; then
 fi
 
 echo "Lookdown root account.."
+echo 'root:root' | chpasswd
 passwd -l root
 
 echo "Starting container .."
