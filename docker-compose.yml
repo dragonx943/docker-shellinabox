@@ -6,7 +6,8 @@ services:
     environment:
     - SIAB_USER=siab
     - SIAB_PASSWORD=my_password
-    - SIAB_SSL=false
+    - SIAB_SSL=true
+    - SIAB_SUDO=true
     - SIAB_PKGS=
     - SIAB_SERVICE=/:LOGIN
     ports:
